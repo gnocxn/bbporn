@@ -1,0 +1,26 @@
+<template name="moviesDetail">
+{{#if isReady}}
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton path="home" text="Contacts"}}
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Details</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            {{#with movie}}
+                <div class="list card">
+                    <div class="item">
+                        <h2>{{title}}</h2>
+                    </div>
+                    <div class="item item-body">
+                        <iframe src="{{embed}}" frameborder="0" width="100%" height="468" scrolling="no"></iframe>
+                    </div>
+                </div>
+            {{/with}}
+        {{/ionContent}}
+    {{/ionView}}
+{{/if}}
+</template>

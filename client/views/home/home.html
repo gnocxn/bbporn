@@ -1,0 +1,21 @@
+<template name="home">
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">BB PORN</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            {{#ionList}}
+                {{#if isReady}}
+                {{#each movies}}
+                    {{#ionItem path="movies.detail" buttonRight=true class="item-icon-right"}}
+                        <img src="{{randomImages images}}">
+                        {{title}}
+                        {{> ionIcon icon="ios-arrow-forward" class="positive"}}
+                    {{/ionItem}}
+                {{/each}}
+                {{/if}}
+            {{/ionList}}
+        {{/ionContent}}
+    {{/ionView}}
+</template>
